@@ -1,0 +1,1 @@
+{"version":3,"file":"welcome.d.ts","sourceRoot":"","sources":["../../src/ws/welcome.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAC;AAE3D;;;;;;;;GAQG;AACH,MAAM,WAAW,gBAAgB;IAC/B,IAAI,EAAE,SAAS,CAAC;IAChB,UAAU,EAAE,MAAM,CAAC;IACnB,eAAe,EAAE,MAAM,CAAC;IACxB,aAAa,CAAC,EAAE,WAAW,GAAG,IAAI,CAAC;CACpC"}
