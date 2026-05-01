@@ -16,13 +16,13 @@ contract↔wire. Nenhum consumer ainda importa.
 
 ## Instalação
 
-Distribuído via Git URL — sem npm registry. Adicione no `package.json` do
-consumer:
+Distribuído via Git URL público (sem npm registry, sem SSH). Adicione no
+`package.json` do consumer:
 
 ```json
 {
   "dependencies": {
-    "@opensea/satellite-contract": "git+ssh://git@github.com:OpenSea-ERP/OpenSea-Satellite-Contract.git#v0.1.0"
+    "@opensea/satellite-contract": "git+https://github.com/OpenSea-ERP/OpenSea-Satellite-Contract.git#v0.1.0"
   }
 }
 ```
@@ -32,6 +32,10 @@ Depois:
 ```bash
 npm install
 ```
+
+O repo é **público** (apenas TS types, zero secrets), então qualquer
+ambiente — local, GitHub Actions, Fly.io, electron-builder — clona via
+HTTPS sem credenciais.
 
 ### Bumpando a versão
 
@@ -47,15 +51,15 @@ npm install
 `npm` faz cache agressivo de URLs git e o sufixo de tag não é
 suficiente para invalidar — daí o `cache clean`.
 
-### Credenciais SSH em CI
+### Credenciais (não precisa)
 
-O install via `git+ssh` requer chave SSH com acesso de leitura ao repo
-privado. Configurações por ambiente:
+O repo é público — `npm install` clona via HTTPS sem qualquer
+credencial. Funciona em GitHub Actions runners limpos, electron-builder
+no CI, Fly.io, dev local sem SSH key, etc.
 
-- **GitHub Actions:** `actions/checkout@v4` com `token: ${{ secrets.RELEASES_PAT }}` (PAT com escopo `repo` no `OpenSea-Satellite-Contract`). Ou alternativamente, `actions/checkout@v4` + step extra que injeta SSH key via `webfactory/ssh-agent`.
-- **Fly.io:** SSH key configurada via `flyctl secrets set SSH_PRIVATE_KEY=...` + setup script que escreve `~/.ssh/id_ed25519` no boot.
-- **Local dev:** SSH key padrão em `~/.ssh/` (já configurada se o dev faz git push).
-- **electron-builder no CI:** usa o token do `actions/checkout` — não precisa de configuração extra.
+Se precisar voltar atrás e tornar privado (ex: incluir secrets no
+contract), o consumer precisaria configurar SSH key ou PAT — ver
+histórico git deste arquivo pra opções.
 
 ## Uso (depois de publicado)
 
