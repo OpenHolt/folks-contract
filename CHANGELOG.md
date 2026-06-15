@@ -1,6 +1,6 @@
 # Changelog
 
-Este arquivo documenta as versões publicadas de `@opensea/satellite-contract`.
+Este arquivo documenta as versões publicadas de `@openholt/satellite-contract`.
 
 Formato: cada versão lista a data e as mudanças. Breaking changes são
 marcadas com **BREAKING**.

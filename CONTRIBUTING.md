@@ -40,7 +40,7 @@ mkdir /tmp/sat-contract-smoke
 cd /tmp/sat-contract-smoke
 npm init -y
 npm install "git+ssh://git@github.com:OpenSea-ERP/OpenSea-Satellite-Contract.git#vX.Y.Z"
-node -e "const c = require('@opensea/satellite-contract'); console.log(c.SATELLITE_KINDS);"
+node -e "const c = require('@openholt/satellite-contract'); console.log(c.SATELLITE_KINDS);"
 ```
 
 Expected: `[ 'EMPORION', 'PRINT_SERVER', 'HORUS' ]`

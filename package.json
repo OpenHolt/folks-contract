@@ -1,5 +1,5 @@
 {
-  "name": "@opensea/satellite-contract",
+  "name": "@openholt/satellite-contract",
   "version": "0.1.0",
   "description": "Tipos TypeScript compartilhados entre OpenSea-API e satélites (Emporion, Horus, PrintServer)",
   "private": true,

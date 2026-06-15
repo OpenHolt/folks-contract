@@ -1,4 +1,4 @@
-# @opensea/satellite-contract
+# @openholt/satellite-contract
 
 **Contrato compartilhado entre o backend `OpenSea-API` e os satélites desktop do ecossistema OpenSea ERP** — Emporion, Horus e PrintServer. Pacote de tipos TypeScript que é a **fonte única de verdade** das mensagens WebSocket trocadas entre servidor e satélites (handshake, heartbeat, push de releases, revogação de dispositivo), dos metadados de release e do _mapping_ entre os nomes do contract e o wire format legado ainda em produção.
 
@@ -60,7 +60,7 @@ Distribuído via **Git URL** (sem npm registry, sem SSH). Adicione ao `package.j
 ```json
 {
   "dependencies": {
-    "@opensea/satellite-contract": "git+https://github.com/OpenSea-ERP/OpenSea-Satellite-Contract.git#v0.1.0"
+    "@openholt/satellite-contract": "git+https://github.com/OpenSea-ERP/OpenSea-Satellite-Contract.git#v0.1.0"
   }
 }
 ```
@@ -93,7 +93,7 @@ import {
   type SatelliteKind,
   type WsServerMessage,
   type WsAppReleasePublishedMessage,
-} from '@opensea/satellite-contract';
+} from '@openholt/satellite-contract';
 
 // SatelliteKind: 'EMPORION' | 'PRINT_SERVER' | 'HORUS' (contract names)
 const myKind: SatelliteKind = 'EMPORION';
