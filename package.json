@@ -1,8 +1,7 @@
 {
   "name": "@openholt/satellite-contract",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tipos TypeScript compartilhados entre OpenSea-API e satélites (Emporion, Horus, PrintServer)",
-  "private": true,
   "license": "PROPRIETARY",
   "author": {
     "name": "OpenSea ERP",
@@ -50,5 +49,13 @@
   },
   "tsd": {
     "directory": "tests"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenHolt/folks-contract.git"
   }
 }
